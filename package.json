@@ -9,7 +9,6 @@
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "dateformat": "^3.0.3",
-    "hoist-non-react-statics": "^3.3.0",
     "lodash.find": "^4.6.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
@@ -38,5 +37,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1"
+  }
 }

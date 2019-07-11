@@ -1,10 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Navbar, NavbarBrand } from "shards-react";
-import { withSidebar } from '../../../HOC/withSidebar';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Navbar, NavbarBrand } from 'shards-react';
+import { withSidebar } from '../../../store/connectFunctions';
 
 class SidebarMainNavbar extends React.Component {
-
   handleToggleSidebar = () => {
     this.props.toggleSidebar();
   }
@@ -20,14 +19,14 @@ class SidebarMainNavbar extends React.Component {
           <NavbarBrand
             className="w-100 mr-0"
             href="#"
-            style={{ lineHeight: "25px" }}
+            style={{ lineHeight: '25px' }}
           >
             <div className="d-table m-auto">
               <img
                 id="main-logo"
                 className="d-inline-block align-top mr-1"
-                style={{ maxWidth: "25px" }}
-                src={require("../../../images/shards-dashboards-logo.svg")}
+                style={{ maxWidth: '25px' }}
+                src={require('../../../images/shards-dashboards-logo.svg')}
                 alt="Shards Dashboard"
               />
               {!hideLogoText && (
@@ -54,11 +53,11 @@ SidebarMainNavbar.propTypes = {
   /**
    * Whether to hide the logo text, or not.
    */
-  hideLogoText: PropTypes.bool
+  hideLogoText: PropTypes.bool,
 };
 
 SidebarMainNavbar.defaultProps = {
-  hideLogoText: false
+  hideLogoText: false,
 };
 
 export default withSidebar(SidebarMainNavbar);

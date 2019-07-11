@@ -1,58 +1,68 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 // Layout Types
-import { DefaultLayout } from "./layouts";
+import { DefaultLayout } from './layouts';
 
 // Route Views
-import BlogOverview from "./views/BlogOverview";
-import UserProfileLite from "./views/UserProfileLite";
-import AddNewPost from "./views/AddNewPost";
-import Errors from "./views/Errors";
-import ComponentsOverview from "./views/ComponentsOverview";
-import Tables from "./views/Tables";
-import BlogPosts from "./views/BlogPosts";
+import BlogOverview from './views/BlogOverview';
+import UserProfileLite from './views/UserProfileLite';
+import AddNewPost from './views/AddNewPost';
+import Errors from './views/Errors';
+import ComponentsOverview from './views/ComponentsOverview';
+import Tables from './views/Tables';
+import BlogPosts from './views/BlogPosts';
 
 export default [
   {
-    path: "/",
+    path: '/',
     exact: true,
     layout: DefaultLayout,
-    component: () => <Redirect to="/blog-overview" />
+    component: () => <Redirect to="/blog-overview" />,
   },
   {
-    path: "/blog-overview",
+    path: '/blog-overview',
     layout: DefaultLayout,
-    component: BlogOverview
+    component: BlogOverview,
   },
   {
-    path: "/user-profile-lite",
+    path: '/user-profile-lite',
     layout: DefaultLayout,
-    component: UserProfileLite
+    component: UserProfileLite,
   },
   {
-    path: "/add-new-post",
+    path: '/user-profile',
     layout: DefaultLayout,
-    component: AddNewPost
+    component: UserProfileLite,
   },
   {
-    path: "/errors",
+    path: '/edit-user-profile',
     layout: DefaultLayout,
-    component: Errors
+    component: UserProfileLite,
   },
   {
-    path: "/components-overview",
+    path: '/add-new-post',
     layout: DefaultLayout,
-    component: ComponentsOverview
+    component: AddNewPost,
   },
   {
-    path: "/tables",
+    path: '/errors',
     layout: DefaultLayout,
-    component: Tables
+    component: Errors,
   },
   {
-    path: "/blog-posts",
+    path: '/components-overview',
     layout: DefaultLayout,
-    component: BlogPosts
-  }
+    component: ComponentsOverview,
+  },
+  {
+    path: '/tables',
+    layout: DefaultLayout,
+    component: Tables,
+  },
+  {
+    path: '/blog-posts',
+    layout: DefaultLayout,
+    component: BlogPosts,
+  },
 ];
